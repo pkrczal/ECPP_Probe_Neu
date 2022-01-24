@@ -116,3 +116,10 @@ void PlayField::addElement(int zeile, int spalte, int value) {
 int PlayField::getElement(int spalte, int zeile) {
     return field[zeile][spalte];
 }
+
+int PlayField::deleteMetaDataElement(int index) {
+    MetaData *m = metaData.at(index);
+    delete m;
+    metaData.erase(metaData.begin() + index);
+    return 0;
+}

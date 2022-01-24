@@ -46,6 +46,8 @@ public:
 
     int read(std::string fileName) override;
 
+    int deleteMetaDataElement(int index);
+
     void addElement(int zeile, int spalte, int value) override;
 
     int getElement(int spalte, int zeile) override;
