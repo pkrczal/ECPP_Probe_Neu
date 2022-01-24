@@ -38,7 +38,7 @@ public:
 
     MetaData *getPair(const std::string &key);
 
-    void deletePair(const std::string &key);
+    void deletePairWithKey(const std::string &key);
 
     int ** getField() {return field;}
 
@@ -46,7 +46,7 @@ public:
 
     int read(std::string fileName) override;
 
-    int deleteMetaDataElement(int index);
+    int deleteMetaDataElementWithIndex(int index);
 
     void addElement(int zeile, int spalte, int value) override;
 

@@ -5,6 +5,9 @@ int main() {
     PlayField p("TestName",5,5);
     p.addPair("UBoot", "1 Wert");
     p.addPair("Kreuzer", "3 Werte vertikal oder horizontal");
+    p.addPair("TestElement", "Test");
+    p.addPair("Fregatte", "2 Elemente vertikal oder horizontal");
+    p.deletePairWithKey("TestElement");
     p.addElement(0,0,1);
     p.addElement(1,1,2);
     p.addElement(2,2,9);

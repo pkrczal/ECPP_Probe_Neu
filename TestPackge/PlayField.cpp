@@ -25,9 +25,11 @@ MetaData *PlayField::getPair(const std::string &key) {
     return rValue;
 }
 
-void PlayField::deletePair(const std::string &key) {
+void PlayField::deletePairWithKey(const std::string &key) {
     for (int i = 0; i < metaData.size(); i++) {
         if (metaData[i]->getKey() == key) {
+            MetaData *m = metaData.at(i);
+            delete m;
             metaData.erase(metaData.begin() + i);
         }
     }
@@ -117,7 +119,7 @@ int PlayField::getElement(int spalte, int zeile) {
     return field[zeile][spalte];
 }
 
-int PlayField::deleteMetaDataElement(int index) {
+int PlayField::deleteMetaDataElementWithIndex(int index) {
     MetaData *m = metaData.at(index);
     delete m;
     metaData.erase(metaData.begin() + index);
